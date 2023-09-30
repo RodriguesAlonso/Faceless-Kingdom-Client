@@ -25,8 +25,7 @@ main {
 }
 
 header{
-    p{
-        
+    p{        
         font-variant-caps: all-small-caps;
         font-family: 'KellySlab-Regular', cursive;
     }

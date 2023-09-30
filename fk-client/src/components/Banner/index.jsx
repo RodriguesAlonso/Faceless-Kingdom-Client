@@ -1,7 +1,6 @@
 import {styled} from "styled-components"
 
 const BannerStyle = styled.header `    
-    
     margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap-reverse;
@@ -10,29 +9,32 @@ const BannerStyle = styled.header `
     background-color: #1F598C;
     max-width: 100%;
     .intro{    
+        display: flex;
+        flex-direction: column;                
         margin-top: 30px;
         margin-left: 5px;
         margin-right: 5px;
         width: 100%;
+        max-width: 540px;
         height: 100%;
-        max-width: 440px;
-        height: 630px;
-        max-height: 590px;
+        max-height: 500px;
         color: #4d6763;
         background-color: #F2E1AE;
-        box-shadow: 10px 10px 32px rgba(0, 0, 0, 0.514);        
-        padding: 1px 1px 20px 20px;
-        font-size: 28px;
+        box-shadow: 10px 10px 32px hsla(0, 0%, 0%, 0.514);        
+        padding: 0px 10px 20px 15px;
+        font-size: 1.7rem;
         font-weight: bold;
         line-height: 40px;
     }
+    p{
+        margin-top: 0px;
+    }
     img{
         margin-left: 5px;
-        margin-right: 5px;        
-        margin-top: 30px;        
-        width: 100%;
-        
-        max-width: 1200px;        
+        margin-right: 5px;    
+        margin-top: 5px;   
+        width: 100%;        
+        max-width: 1000px;        
         box-shadow: 10px 10px 32px rgba(0, 0, 0, 0.514);
     }
     `

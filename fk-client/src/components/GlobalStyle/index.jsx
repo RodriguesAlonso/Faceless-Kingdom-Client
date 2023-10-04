@@ -17,8 +17,12 @@ html {
 }
 body {
     margin: 0;  
-    min-height: 100vh;  
-    background-color: #1F598C;
+    min-height: 100vh;
+    background-image: url('/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 main {
     display: block; 
@@ -31,8 +35,11 @@ header{
     }
 }
 h1 {
-    font-size: 2em; 
-    margin: 0.67em 0;   
+    color: #124C59;
+    font-size: 6em; 
+    margin-top: 5%;
+    margin-left: 5%;
+    font-family: 'Kelly Slab';
 }
 hr {
     box-sizing: content-box;    

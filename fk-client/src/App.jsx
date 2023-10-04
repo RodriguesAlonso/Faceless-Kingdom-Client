@@ -1,15 +1,15 @@
-import GlobalStyle from "./components/GlobalStyle"
-import Banner from "./components/Banner"
-import Realm from "./components/Realm"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Index from "./components/Index"
 
 function App() {
-
-  return (<>
-    <GlobalStyle/>
-    <Banner/>
-    <Realm/>
-  </>        
-  )
+    return (
+      <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+          </Routes>
+          
+      </BrowserRouter>
+    )
 }
 
 export default App

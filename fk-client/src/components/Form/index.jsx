@@ -21,7 +21,7 @@ const Form = () => {
     return (
         <FormStyle>
             <Logo/>
-            <form action="|">
+            <form action="/realm">
                 <Campo/>
                 <Button/>
             </form>

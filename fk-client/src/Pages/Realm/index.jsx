@@ -1,7 +1,7 @@
-import GlobalStyle from "../GlobalStyle"
+import GlobalStyle from "../../components/GlobalStyle"
 import styled from "styled-components"
-import Card from "../Card"
-import Table from "./Table"
+import Card from "../../components/Card"
+import Table from "../../components/TableRealm"
 
 // const Wrapper = styled.aside`
 //     display: flex;
@@ -45,6 +45,7 @@ const RealmStyle = styled.body `
 const Realm = () => {
     return (
         <>
+            <GlobalStyle />
             <RealmStyle>
                     <h1>Realms</h1>
                 <div className="realms">

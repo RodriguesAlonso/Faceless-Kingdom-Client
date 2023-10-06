@@ -10,7 +10,8 @@ const BannerStyle = styled.div `
     margin-top: 10px;
     font-family: 'Kelly Slab';    
     `
-const Banner = () => {
+
+const Header = () => {
     return (
         <BannerStyle>
             <Intro/>
@@ -19,4 +20,4 @@ const Banner = () => {
     )
 }
 
-export default Banner
+export default Header

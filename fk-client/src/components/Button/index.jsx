@@ -23,8 +23,8 @@ const ButtonStyle = styled.div `
 const Button = () => {
     return (
         <ButtonStyle>
-            <button>
-                Signup
+            <button type="submit">
+                Sign Up
             </button>
         </ButtonStyle>
     )

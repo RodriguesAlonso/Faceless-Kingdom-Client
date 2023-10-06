@@ -1,5 +1,4 @@
 import {createGlobalStyle} from "styled-components";
-
 import KellySlabRegular from "./fonts/KellySlab-Regular.ttf";
 
 

@@ -22,11 +22,21 @@ const CampoStyle = styled.div `
     }
 `
 
-const Campo = () => {
+const Campo = ({
+    type,
+    placeholder = "Campo",
+    value,
+    aoAlterado
+}) => {
     return (
-        <CampoStyle >
-            <input type="text" placeholder="User"/>
-            <input type="password" placeholder="Password"/>
+        <CampoStyle>
+            <input 
+                type={type}
+                value={value}
+                placeholder={placeholder}
+                onChange={
+                    event => aoAlterado(event.target.value)
+                }/>
         </CampoStyle>
 
 

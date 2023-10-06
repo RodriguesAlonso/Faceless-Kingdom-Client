@@ -2,7 +2,24 @@ import {styled} from "styled-components"
 import Intro from "../IntroText"
 import Form from "../Form"
 
-const BannerStyle = styled.div `   
+
+const Wrapper = styled.body`
+    
+    background-image: url(/banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+    height: 100vh;   
+    margin-top: 0px;
+    h1{
+        margin: 0px;
+        padding: 10px;    
+    }    
+    `
+    
+
+
+const StyledHeader = styled.header `       
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-between;
@@ -13,10 +30,13 @@ const BannerStyle = styled.div `
 
 const Header = () => {
     return (
-        <BannerStyle>
+        <Wrapper>
+        <h1>Faceless Kingdom</h1>
+        <StyledHeader>
             <Intro/>
             <Form/>
-        </BannerStyle>
+        </StyledHeader>
+        </Wrapper>
     )
 }
 

@@ -16,9 +16,16 @@ const ButtonStyle = styled.div `
         font-weight: Bolder;        
         font-size: 1rn;
         text-align: center;
+        cursor: pointer;  
+        &:hover
+        {
+            background-color: #124C59;
+            
+            color: #F2E1AE;
+        }
         
-    }
-`
+        }
+    `
 
 const Button = () => {
     return (

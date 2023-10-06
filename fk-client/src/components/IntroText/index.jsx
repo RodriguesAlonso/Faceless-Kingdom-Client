@@ -1,10 +1,9 @@
 import styled from "styled-components"
 
 const IntroTextStyle = styled.header `    
-    display: inline;    
-    width: 100%;        
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 65px;
     max-width: 430px;
     min-width: 115px;  
     background-color: #124C59;

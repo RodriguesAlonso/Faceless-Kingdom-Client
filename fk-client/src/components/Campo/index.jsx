@@ -24,19 +24,15 @@ const CampoStyle = styled.div `
 
 const Campo = ({
     type,
-    placeholder = "Campo",
-    value,
-    aoAlterado
+    placeholder,
+    
 }) => {
     return (
         <CampoStyle>
             <input 
-                type={type}
-                value={value}
+                type={type}                
                 placeholder={placeholder}
-                onChange={
-                    event => aoAlterado(event.target.value)
-                }/>
+                 />
         </CampoStyle>
 
 

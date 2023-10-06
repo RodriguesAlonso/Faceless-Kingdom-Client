@@ -1,9 +1,11 @@
 import styled from "styled-components"
 
 
-const LogoStyle = styled.div `   
-    width: 100%;           
+const StyledLogo = styled.div `   
+    width: 100%;     
+    margin-top: 60px;
     img{
+        
         width: 100%;
         box-shadow: 5px 5px 15px #4d6763;        
         
@@ -12,9 +14,9 @@ const LogoStyle = styled.div `
 `
 const Logo = () => {
     return (
-        <LogoStyle>
+        <StyledLogo>
             <img src="/logo.png" alt="logo"/>
-        </LogoStyle>
+        </StyledLogo>
     )
 
 }

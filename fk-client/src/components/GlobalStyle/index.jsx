@@ -17,10 +17,8 @@ html {
 body {
     margin: 0;  
     min-height: 100vh;
-    background-image: url('/banner.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color:#1F598C;
+    
 
 }
 main {

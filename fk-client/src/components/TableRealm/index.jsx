@@ -38,7 +38,7 @@ const realms = [
 const StyledTable = styled.div`
   margin: 30px;
   justify-content: center;
-  align-items: center;
+  
   display: flex;
   flex-wrap: wrap;
   width: 80%;
@@ -84,17 +84,19 @@ function TableRealm() {
                             <td>{
                                 realm.level
                             }</td>
-
                         </tr>
                     ))
-                } </tbody>
+                } 
+                </tbody>
             </table>
             <table>
                 <thead>
-                    <th>Gold</th>
-                    <th>Food</th>
-                    <th>Building</th>
-                    <th>Unit</th>
+                    <tr>
+                        <th>Gold</th>
+                        <th>Food</th>
+                        <th>Building</th>
+                        <th>Unit</th>
+                    </tr>
                 </thead>
                 <tbody>{
                     realms.map((realm) => (
@@ -113,8 +115,6 @@ function TableRealm() {
                             <td>{
                                 realm.unit
                             }</td>
-
-
                         </tr>
                     ))
                 } </tbody>

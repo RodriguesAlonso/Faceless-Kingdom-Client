@@ -1,55 +1,45 @@
 import GlobalStyle from "../../components/GlobalStyle"
 import styled from "styled-components"
 import Card from "../../components/Card"
-import Table from "../../components/TableRealm"
-
-// const Wrapper = styled.aside`
-//     display: flex;
-//     justify-content: center;
-//     flex-wrap: wrap;
-//     position: absolute;
-//     right: 0px;
-//     width: 100%;
-//     max-width: 900px;
-// `
-
+import TableRealm from "../../components/TableRealm"
 
 const RealmStyle = styled.body `
-    display: flex;
-    justify-content: space-around;
-    align-items: center;    
+    position: fixed;   
     background-image: url(/backGroundRealms.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
-    margin: 0;        
+    width: 100%;
+    height: 100vh;    
     h1{     
         font-family: 'Kelly Slab';
         color: #396D73;
         font-size: 6em;
     }
-    .realms{
-        margin-left: 30%;
-        width: 50%;
-        display: flex;                
-        justify-content: center;    
-        align-items: center;
-        flex-wrap: wrap;        
-        gap: 25px;  
-    
-    }  
-    
+    .realms{        
+        margin-left: 2%;
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 5px;;    
+        
+        
+    }      
 `
+const WrapperTable = styled.div `
+
+`
+
 
 const Realm = () => {
     return (
         <>
-            <GlobalStyle />
+            <GlobalStyle/>
             <RealmStyle>
-                    <h1>Realms</h1>
+                <h1>Realms</h1>
+                <WrapperTable>
+                </WrapperTable>
+                    <TableRealm/>
                 <div className="realms">
-                <Table/>
                     <Card realm_img="/src/assets/realms/Tolariano.png"></Card>
                     <Card realm_img="/src/assets/realms/Dominaria.png"></Card>
                     <Card realm_img="/src/assets/realms/Mirrodin.png"></Card>

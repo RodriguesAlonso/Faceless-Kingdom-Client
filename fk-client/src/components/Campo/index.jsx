@@ -25,6 +25,7 @@ const CampoStyle = styled.div `
 const Campo = ({
     type,
     placeholder,
+    onChange,
     
 }) => {
     return (
@@ -32,6 +33,8 @@ const Campo = ({
             <input 
                 type={type}                
                 placeholder={placeholder}
+                onChange = {onChange}
+                required
                  />
         </CampoStyle>
 

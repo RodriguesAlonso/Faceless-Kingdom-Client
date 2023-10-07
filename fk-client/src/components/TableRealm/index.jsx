@@ -1,6 +1,6 @@
-import axios from "axios";
 import styled from "styled-components";
-import {useState, useEffect} from 'react';
+import realmInstance from "../../helper/axios-instance";
+import useAxios from "../../hook/use-axios";
 
 
 const StyledTable = styled.div `
@@ -16,22 +16,28 @@ const StyledTable = styled.div `
     font-size:1em;    
     text-align: center;      
     td, th {
-    padding: 10px;
+    padding: 5px;
     
 }
 `
 
 function TableRealm() {
-    const [realmList, setRealmList] = useState([])
+    const [realmList, loading, error] = useAxios({
+        axiosInstance: realmInstance,
+        method: 'get',
+        url:'realms',
 
-    useEffect(() => {
-        axios.get('http://127.0.0.1:5000/realms')
-        .then((res) => {
-            console.log(res.data)
-            setRealmList(res.data)
-        })
-        .catch((err) => console.log(err))
-    }, [])
+    })
+    
+    if (loading) {
+        return <div><h1>LOADING</h1></div>
+    }
+    if (error) {
+        return <>
+        <div>{error}</div>
+        <h1>Error na URL</h1>
+        </>
+    }
     return (
         <StyledTable>
             <table>

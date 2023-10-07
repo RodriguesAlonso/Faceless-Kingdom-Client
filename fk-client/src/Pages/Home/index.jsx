@@ -12,7 +12,7 @@ const StyledBody = styled.body`
 
 function Home() {
     return (
-        <>
+        <>  
             <GlobalStyle />
             <StyledBody>
                 <Header />

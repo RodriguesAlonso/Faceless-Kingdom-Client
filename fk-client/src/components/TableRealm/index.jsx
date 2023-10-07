@@ -1,51 +1,19 @@
+import axios from "axios";
 import styled from "styled-components";
+import {useState, useEffect} from 'react';
 
 
-const realms = [
-    {
-        "id": 0,
-        "realm": "Tolariano",
-        "type": "onix",
-        "experience": "200",
-        "level": "2",
-        "gold": "1000",
-        "food": "10",
-        "building": "3",
-        "unit": "101"
-    }, {
-        "id": 1,
-        "realm": "Dominaria",
-        "type": "Amestist",
-        "experience": "1200",
-        "level": "20",
-        "gold": "10",
-        "food": "1000",
-        "building": "6",
-        "unit": "5"
-    }, {
-        "id": 2,
-        "realm": "Mirrodim",
-        "type": "Steel",
-        "experience": "20000",
-        "level": "35",
-        "gold": "10000",
-        "food": "0",
-        "building": "3",
-        "unit": "101"
-    }
-];
-
-const StyledTable = styled.div`
-  margin: 30px;
-  justify-content: center;
-  
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  max-width: 680px;
-  
-  background-color:#F2F1DC;
-  font-size:1em;    
+const StyledTable = styled.div `
+    margin: 30px;
+    justify-content: center;
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 680px;
+    
+    background-color:#F2F1DC;
+    font-size:1em;    
     text-align: center;      
     td, th {
     padding: 10px;
@@ -54,12 +22,21 @@ const StyledTable = styled.div`
 `
 
 function TableRealm() {
+    const [realmList, setRealmList] = useState([])
+
+    useEffect(() => {
+        axios.get('http://127.0.0.1:5000/realms')
+        .then((res) => {
+            console.log(res.data)
+            setRealmList(res.data)
+        })
+        .catch((err) => console.log(err))
+    }, [])
     return (
         <StyledTable>
             <table>
                 <thead>
                     <tr>
-
                         <th>Realm</th>
                         <th>Type</th>
                         <th>Experience</th>
@@ -68,7 +45,7 @@ function TableRealm() {
                     </tr>
                 </thead>
                 <tbody> {
-                    realms.map((realm) => (
+                    realmList.map((realm) => (
                         <tr key={
                             realm.id
                         }>
@@ -86,8 +63,7 @@ function TableRealm() {
                             }</td>
                         </tr>
                     ))
-                } 
-                </tbody>
+                } </tbody>
             </table>
             <table>
                 <thead>
@@ -99,7 +75,7 @@ function TableRealm() {
                     </tr>
                 </thead>
                 <tbody>{
-                    realms.map((realm) => (
+                    realmList.map((realm) => (
                         <tr key={
                             realm.id
                         }>

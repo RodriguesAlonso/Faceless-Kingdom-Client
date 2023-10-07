@@ -16,8 +16,6 @@ const Wrapper = styled.body`
         padding: 10px;    
     }    
     `
-    
-
 
 const StyledHeader = styled.header `       
     display: flex;
